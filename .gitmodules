@@ -1,0 +1,3 @@
+[submodule "game/lib/HC"]
+	path = game/lib/HC
+	url = git@github.com:vrld/HC.git
