@@ -14,6 +14,6 @@ function block:new ()
     o = o or {}   -- create object if user does not provide one
     setmetatable(o, {__index= self})
     o.coll = setmetatable({}, {_index=self.coll})
-    return o
+    iturn o
 end
 return block
