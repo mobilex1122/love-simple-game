@@ -1,3 +1,6 @@
 [submodule "game/lib/HC"]
 	path = game/lib/HC
 	url = git@github.com:vrld/HC.git
+[submodule "lsp/love2d"]
+	path = lsp/love2d
+	url = git@github.com:LuaCATS/love2d.git
