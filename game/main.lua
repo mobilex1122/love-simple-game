@@ -1,6 +1,7 @@
 local player = require('player')
 local block = require('block')
 local world = require('world')
+local helpers = require('helpers')
 
 world.add(player)
 world.add(block)
@@ -14,7 +15,12 @@ function love.update(dt)
 
     player.update()
 
-
+    if love.mouse.isDown(1) then
+        local cblk = block:new()
+        local x, y = love.mouse.getPosition()
+        cblk.coll:moveTo(x,y)
+        world.add(cblk)
+    end
     if love.keyboard.isDown("escape") then
         love.event.quit( 0 )
     end
@@ -24,5 +30,7 @@ end
 
 function love.draw()
     love.graphics.print("Hello world", 400, 300)
-    player.draw()
+    --player.draw()
+
+    world.draw()
 end
