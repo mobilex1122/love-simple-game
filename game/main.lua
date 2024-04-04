@@ -7,7 +7,7 @@ if os.getenv("LOCAL_LUA_DEBUGGER_VSCODE") == "1" then
     require("lldebugger").start()
 end
 
-function love.update()
+function love.update(dt)
     local px, py = 0,0
 
     player.update()
@@ -17,7 +17,7 @@ function love.update()
         love.event.quit( 0 )
     end
 
-    world.update()
+    world.update(dt)
 end
 
 function love.draw()

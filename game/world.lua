@@ -7,7 +7,7 @@ function world.add(obj)
 end
 function world.update(dt)
     for _, obj in pairs(world.objects) do
-        obj.coll:move(obj.vx,obj.vy)
+        obj.coll:move(obj.vx * dt,obj.vy * dt)
         obj.vx = 0
         obj.vy = 0
     end

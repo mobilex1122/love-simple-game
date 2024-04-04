@@ -11,11 +11,16 @@ function player.draw()
     love.graphics.rectangle("fill",x - 10, y - 10, 20,20)
 end
 
-function player.update()
+function player.update(dt)
     if controls.left() then
-        player.vx = -1
+        player.vx = -100
     elseif controls.right() then 
-        player.vx = 1
+        player.vx = 100
+    end
+    if controls.up() then
+        player.vy = -100
+    elseif controls.down() then 
+        player.vy = 100
     end
 end
 
